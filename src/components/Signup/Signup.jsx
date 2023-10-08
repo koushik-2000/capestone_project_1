@@ -1,7 +1,9 @@
 import React,{useState, useEffect} from 'react';
 import './Signup.css';
+import {useNavigate} from 'react-router-dom';
 
 function Signup() {
+const navigate = useNavigate();
   let initialValues = {
     name:"",
     userName:"",
@@ -41,11 +43,11 @@ function Signup() {
     if(!values.email){
       errors.email = "email is required";
     }
-    if(!values.mobile){
-      errors.mobile = "mobile is required";
-    }
     if(!values.mobile.match(mobFormat)){
       errors.mobile = "must be 10 digits";
+      if(!values.mobile){
+        errors.mobile = "mobile is required";
+      }
     }
     if(!values.checkBox){
       errors.checkBox = "please agree to sign up";
@@ -60,6 +62,7 @@ function Signup() {
       localStorage.setItem("userName", formValue.userName);
       localStorage.setItem("email", formValue.email);
       localStorage.setItem("mobile", formValue.mobile);
+      navigate('/cate');
     }
   }, [formErrors])
   function handleCheck(e){
