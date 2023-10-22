@@ -18,7 +18,8 @@ function Category() {
       if(item.length >= 3){
         console.log('success');
         warn.classList.add("hide");
-        localStorage.setItem("choices",item)
+        var choices = JSON.stringify(item);
+        localStorage.setItem("choiceList", choices);
       }
       else{
         warn.classList.remove("hide");
