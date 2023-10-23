@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+}
+.mainArea {
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  padding: 2.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.lft {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section1 {
+  width: 100%;
+  flex: 0.4;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.inner_right {
+  width: 320px;
+  height: 375px;
+  flex-shrink: 0;
+}
+
+.notes {
+  width: 100%;
+  height: 100%;
+  background: #f1c75b;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.notes_header {
+  width: 100%;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+.notes .notes_section {
+  width: 100%;
+  height: 90%;
+  overflow-y: auto;
+  margin: 1em 0;
+}
+
+.notes_section::-webkit-scrollbar {
+  display: none;
+}
+
+.inner_left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.name_card {
+  width: 407px;
+  height: 219px;
+  flex-shrink: 0;
+  background: #5746ea;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.userDetails {
+  height: 50%;
+}
+.realName,
+.usrMail,
+.userName {
+  color: #fff;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+.userName {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.catList {
+  height: 50%;
+  overflow-y: auto;
+}
+.catList::-webkit-scrollbar {
+  display: none; /* chrome,safari,opera */
+}
+.cateEle {
+  width: 100px;
+  padding: 0.4em 1em;
+  display: inline-block;
+  margin: 5px;
+  background: #9f94ff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: #fff;
+  text-transform: capitalize;
+  border-radius: 30px;
+}
+
+.proImg {
+  height: 100%;
+  width: 80px;
+}
+
+.weather {
+  width: 407px;
+  height: 127px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.top {
+  height: 30%;
+  background: #ff4ade;
+  padding: 5px;
+}
+.date,
+.time {
+  color: #fff;
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  width: 50%;
+  display: inline-block;
+  text-align: center;
+}
+/* bottom */
+.bottom {
+  height: 70%;
+  background: #101744;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.weather_box,
+.wind,
+.humidity,
+.pBox,
+.temp,
+.celBox {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 2vmin;
+  text-transform: capitalize;
+}
+.icon {
+  height: 20px;
+  width: 20px;
+  margin-right: 15px;
+}
+.temp,
+.wh {
+  height: 100%;
+  width: 33.1%;
+}
+.line {
+  width: 0.3%;
+  height: 40%;
+  background: #fff;
+}
+.temp {
+  display: flex;
+  flex-direction: column;
+}
+.cel {
+  font-size: 6vmin;
+}
+.pBox,
+.humidity {
+  height: 40%;
+  padding-bottom: 10px;
+}
+.celBox,
+.wind {
+  height: 60%;
+}
+.joking {
+  position: relative;
+  bottom: 10px;
+  font-size: 2rem;
+  color: #fff;
+}
+.iconBox {
+  height: 60%;
+}
+.weatherState {
+  height: 40%;
+  color: #fff;
+  font-size: 4vmin;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+.iconBox,
+.weatherState {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.iconBox {
+  align-items: center;
+}
+
+.rght {
+  width: 363px;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.news {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.newsImg {
+  height: 50%;
+  width: 100%;
+}
+
+.newsImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.newsContent {
+  height: 50%;
+  padding: 20px;
+  line-height: 1.7;
+}
+
+.newsContent div {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  scrollbar-width: 0;
+}
+
+.newsContent div::-webkit-scrollbar {
+  display: none;
+}
+
+.btn_section {
+  display: flex;
+  justify-content: end;
+}
+.browse_btn {
+  padding: 0.5em 2em;
+  background: greenyellow;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* right */
+.rgt {
+  height: 85%;
+  width: 30%;
+  background: greenyellow;
+  border-radius: 30px;
+  margin-right: 7%;
+  overflow: hidden;
+}

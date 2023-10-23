@@ -1,0 +1,23 @@
+.circular-status-bar {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-arc {
+  width: 90%;
+  height: 90%;
+  background: conic-gradient(#ff6a6a 0deg 290deg, transparent 250deg 360deg);
+  border-radius: 50%;
+}
+
+.fill {
+  position: absolute;
+  border-radius: 50%;
+  width: 85%;
+  height: 85%;
+  background: #181d37;
+}
