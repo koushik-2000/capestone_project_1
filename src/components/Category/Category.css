@@ -139,9 +139,9 @@
     padding: 8px 20px;
     border-radius: 30px;
     border: none;
-    position: relative;
-    top: 50%;
-    left: 77%;
+    position: absolute;
+    right: 11%;
+    bottom: 4%;
 }
 /* selected */
 .selected{

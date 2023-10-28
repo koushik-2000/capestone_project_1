@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import "./Category.css";
+import {useNavigate} from 'react-router-dom';
 import images from "../../assets/cat_img";
-import { Link } from "react-router-dom";
 
 function Category() {
+  const navigate = useNavigate();
   let [item, setItem] = useState([]);
   const toggle = (e) => {
     var x = e.target.id;
@@ -15,12 +16,15 @@ function Category() {
     }
   };
   const nxtPage = () => {
+    console.log(item);
     var warn = document.getElementById("error");
     if (item.length >= 3) {
       console.log("success");
       warn.classList.add("hide");
       var choices = JSON.stringify(item);
       localStorage.setItem("choiceList", choices);
+      navigate('/Main');
+      window.location.reload(true);
     } else {
       warn.classList.remove("hide");
       console.log("fail");
@@ -28,10 +32,8 @@ function Category() {
   };
   function cancel(e) {
     var tar = e.target.id;
-    // var rem = document.getElementById(tar);
     let tata = document.getElementsByClassName(tar)[0];
     var x = item.filter((jam) => jam !== tar);
-    console.log(tar);
     setItem(x);
     tata.classList.add("nope");
   }
@@ -181,11 +183,9 @@ function Category() {
               />
             </div>
           </div>
-          <Link to="/Main">
             <div className="nxtPage" onClick={nxtPage}>
               next page
             </div>
-          </Link>
         </div>
       </div>
     </div>
